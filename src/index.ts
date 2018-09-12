@@ -44,6 +44,8 @@ client.registry
 	.registerDefaultCommands({
 		help: false
 	})
-	.registerCommandsIn(path.join(__dirname, 'commands'));
+	.registerCommandsIn(path.join(__dirname, 'commands/utils'))
+	.registerCommandsIn(path.join(__dirname, 'commands/utils/roles'))
+	.registerCommandsIn(path.join(__dirname, 'commands/utils/user'));
 
 client.login(auth.token);
